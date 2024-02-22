@@ -35,9 +35,10 @@ The goal is to take control of the contract.
 1. If we look at the `receive()` function there is a condition that the amount of ether sent should be superior or equal to the `prize`. So let's grab the `prize` value.
 
 - I used foundry to call the `prize()` function of the contract. Here is the command:
+- replace `0xaaaaaaaaaaaa` with the contract instance address of yours, and also environment variables.
 
 ```bash
-cast call 0xD17c2E2d1e24b5e791c0c2f34dbeCe57A771399a "prize()" --private-key $PRIVATE_KEY_TESTNET --rpc-url $alchemy_RPC_sepolia
+cast call 0xaaaaaaaaaaaa "prize()" --private-key $PRIVATE_KEY_TESTNET --rpc-url $alchemy_RPC_sepolia
 ```
 
 2. Decode the result of the previous command:
@@ -129,9 +130,10 @@ Level is completed.
 1. `receive()`関数を見ると、送られるエーテルの量が`prize`よりも多くなければならないという条件があります。したがって、`prize`の値を取得しましょう。
 
 - `prize()`関数を呼び出すために foundry を使用しました。こちらがコマンドです：
+- `0xaaaaaaaaaaaa`を自分のコントラクトインスタンスアドレスに置き換え、環境変数も設定してください。
 
 ```bash
-cast call 0xD17c2E2d1e24b5e791c0c2f34dbeCe57A771399a "prize()" --private-key $PRIVATE_KEY_TESTNET --rpc-url $alchemy_RPC_sepolia
+cast call 0xaaaaaaaaaaaa "prize()" --private-key $PRIVATE_KEY_TESTNET --rpc-url $alchemy_RPC_sepolia
 ```
 
 2. 前のコマンドの結果をデコードします：
